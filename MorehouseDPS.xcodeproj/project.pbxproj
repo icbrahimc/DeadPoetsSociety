@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582115DB68FB2EB209723E4D /* Pods_MorehouseDPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */; };
+		77528E94EF4855E840648011 /* Pods_MorehouseDPSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */; };
+		7A1051D1C36BE0D518E8F24E /* Pods_MorehouseDPSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */; };
 		AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FB1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FC1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorehouseDPSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE513B0EA1D0F1CF51B23FD /* Pods-MorehouseDPSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.release.xcconfig"; sourceTree = "<group>"; };
+		942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.release.xcconfig"; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +58,11 @@
 		AAC604111ECEBDFD0073FF43 /* MorehouseDPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorehouseDPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC604151ECEBDFD0073FF43 /* MorehouseDPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorehouseDPSUITests.swift; sourceTree = "<group>"; };
 		AAC604171ECEBDFD0073FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorehouseDPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7CAC87A7E33310643A60D4 /* Pods-MorehouseDPSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorehouseDPSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA38C749F6F40F97B7713F57 /* Pods-MorehouseDPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.debug.xcconfig"; sourceTree = "<group>"; };
+		F19DE8282E4DF26C072035E3 /* Pods-MorehouseDPSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582115DB68FB2EB209723E4D /* Pods_MorehouseDPS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77528E94EF4855E840648011 /* Pods_MorehouseDPSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1051D1C36BE0D518E8F24E /* Pods_MorehouseDPSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56E742263D3EF74039D66E7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */,
+				CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */,
+				0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		820EC91E247BD815D5FFBB10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA38C749F6F40F97B7713F57 /* Pods-MorehouseDPS.debug.xcconfig */,
+				942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */,
+				F19DE8282E4DF26C072035E3 /* Pods-MorehouseDPSTests.debug.xcconfig */,
+				2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */,
+				BE7CAC87A7E33310643A60D4 /* Pods-MorehouseDPSUITests.debug.xcconfig */,
+				0EE513B0EA1D0F1CF51B23FD /* Pods-MorehouseDPSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AAC603E91ECEBDFD0073FF43 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +123,8 @@
 				AAC604091ECEBDFD0073FF43 /* MorehouseDPSTests */,
 				AAC604141ECEBDFD0073FF43 /* MorehouseDPSUITests */,
 				AAC603F31ECEBDFD0073FF43 /* Products */,
+				820EC91E247BD815D5FFBB10 /* Pods */,
+				56E742263D3EF74039D66E7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC6041A1ECEBDFD0073FF43 /* Build configuration list for PBXNativeTarget "MorehouseDPS" */;
 			buildPhases = (
+				58863166A2C4B0D4C46FC006 /* [CP] Check Pods Manifest.lock */,
 				AAC603EE1ECEBDFD0073FF43 /* Sources */,
 				AAC603EF1ECEBDFD0073FF43 /* Frameworks */,
 				AAC603F01ECEBDFD0073FF43 /* Resources */,
+				6F7F45D2BE879D58D0EC94DF /* [CP] Embed Pods Frameworks */,
+				9A04FDFAA3D69FA174AC230D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC6041D1ECEBDFD0073FF43 /* Build configuration list for PBXNativeTarget "MorehouseDPSTests" */;
 			buildPhases = (
+				F1B9719FBFF3972F70AAD634 /* [CP] Check Pods Manifest.lock */,
 				AAC604021ECEBDFD0073FF43 /* Sources */,
 				AAC604031ECEBDFD0073FF43 /* Frameworks */,
 				AAC604041ECEBDFD0073FF43 /* Resources */,
+				8A37B2C62EF17E2A1A24711A /* [CP] Embed Pods Frameworks */,
+				C6797A861C037BD76C73241D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC604201ECEBDFD0073FF43 /* Build configuration list for PBXNativeTarget "MorehouseDPSUITests" */;
 			buildPhases = (
+				76C19509AF30004D52DB95ED /* [CP] Check Pods Manifest.lock */,
 				AAC6040D1ECEBDFD0073FF43 /* Sources */,
 				AAC6040E1ECEBDFD0073FF43 /* Frameworks */,
 				AAC6040F1ECEBDFD0073FF43 /* Resources */,
+				0595D95D0E4DD746E9BF2CC3 /* [CP] Embed Pods Frameworks */,
+				567B5FFFE8F3C9D0212291E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +313,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0595D95D0E4DD746E9BF2CC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		567B5FFFE8F3C9D0212291E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58863166A2C4B0D4C46FC006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F7F45D2BE879D58D0EC94DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76C19509AF30004D52DB95ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A37B2C62EF17E2A1A24711A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A04FDFAA3D69FA174AC230D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6797A861C037BD76C73241D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B9719FBFF3972F70AAD634 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAC603EE1ECEBDFD0073FF43 /* Sources */ = {
@@ -423,6 +610,7 @@
 		};
 		AAC6041B1ECEBDFD0073FF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA38C749F6F40F97B7713F57 /* Pods-MorehouseDPS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
@@ -436,6 +624,7 @@
 		};
 		AAC6041C1ECEBDFD0073FF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
@@ -449,6 +638,7 @@
 		};
 		AAC6041E1ECEBDFD0073FF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19DE8282E4DF26C072035E3 /* Pods-MorehouseDPSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +654,7 @@
 		};
 		AAC6041F1ECEBDFD0073FF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,6 +670,7 @@
 		};
 		AAC604211ECEBDFD0073FF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7CAC87A7E33310643A60D4 /* Pods-MorehouseDPSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
@@ -493,6 +685,7 @@
 		};
 		AAC604221ECEBDFD0073FF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EE513B0EA1D0F1CF51B23FD /* Pods-MorehouseDPSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
