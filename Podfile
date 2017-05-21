@@ -7,6 +7,10 @@ target 'MorehouseDPS' do
 
   # Pods for MorehouseDPS
 	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKShareKit'
+	pod 'FBSDKLoginKit'
 
   target 'MorehouseDPSTests' do
     inherit! :search_paths
