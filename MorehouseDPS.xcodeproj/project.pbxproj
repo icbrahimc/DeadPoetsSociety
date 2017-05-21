@@ -10,6 +10,7 @@
 		582115DB68FB2EB209723E4D /* Pods_MorehouseDPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */; };
 		77528E94EF4855E840648011 /* Pods_MorehouseDPSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */; };
 		7A1051D1C36BE0D518E8F24E /* Pods_MorehouseDPSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */; };
+		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
 		AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FB1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FC1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
@@ -44,6 +45,7 @@
 		0EE513B0EA1D0F1CF51B23FD /* Pods-MorehouseDPSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.release.xcconfig"; sourceTree = "<group>"; };
 		942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.release.xcconfig"; sourceTree = "<group>"; };
+		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				AAC603FC1ECEBDFD0073FF43 /* Assets.xcassets */,
 				AAC603FE1ECEBDFD0073FF43 /* LaunchScreen.storyboard */,
 				AAC604011ECEBDFD0073FF43 /* Info.plist */,
+				AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */,
 			);
 			path = MorehouseDPS;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
 				AAC603F81ECEBDFD0073FF43 /* ViewController.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
 			);
