@@ -45,6 +45,7 @@
 		0EE513B0EA1D0F1CF51B23FD /* Pods-MorehouseDPSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSUITests/Pods-MorehouseDPSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.release.xcconfig"; sourceTree = "<group>"; };
 		942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.release.xcconfig"; sourceTree = "<group>"; };
+		AA0F52121ED40A2A008CF619 /* MorehouseDPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MorehouseDPS.entitlements; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +144,7 @@
 		AAC603F41ECEBDFD0073FF43 /* MorehouseDPS */ = {
 			isa = PBXGroup;
 			children = (
+				AA0F52121ED40A2A008CF619 /* MorehouseDPS.entitlements */,
 				AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */,
 				AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */,
 				AAC603F71ECEBDFD0073FF43 /* ViewController.swift */,
@@ -252,6 +254,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 2BZ75GT22X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					AAC604051ECEBDFD0073FF43 = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -617,6 +624,7 @@
 			baseConfigurationReference = EA38C749F6F40F97B7713F57 /* Pods-MorehouseDPS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MorehouseDPS/MorehouseDPS.entitlements;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
 				INFOPLIST_FILE = MorehouseDPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -631,6 +639,7 @@
 			baseConfigurationReference = 942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MorehouseDPS/MorehouseDPS.entitlements;
 				DEVELOPMENT_TEAM = 2BZ75GT22X;
 				INFOPLIST_FILE = MorehouseDPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

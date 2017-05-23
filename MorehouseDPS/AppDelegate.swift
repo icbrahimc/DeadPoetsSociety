@@ -8,6 +8,35 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+
+/*
+ 
+ //  AppDelegate.m
+ #import <FBSDKCoreKit/FBSDKCoreKit.h>
+ 
+ - (BOOL)application:(UIApplication *)application
+ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+ [[FBSDKApplicationDelegate sharedInstance] application:application
+ didFinishLaunchingWithOptions:launchOptions];
+ // Add any custom logic here.
+ return YES;
+ }
+ 
+ - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+ 
+ BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+ openURL:url
+ sourceApplication:sourceApplication
+ annotation:annotation
+ ];
+ // Add any custom logic here.
+ return handled;
+ }
+ 
+ */
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Facebook sdk delegate.
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        // Firebase sdk delegate.
         FIRApp.configure()
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handle: Bool = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+        return handle
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
