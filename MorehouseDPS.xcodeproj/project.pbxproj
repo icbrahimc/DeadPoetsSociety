@@ -10,6 +10,7 @@
 		582115DB68FB2EB209723E4D /* Pods_MorehouseDPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */; };
 		77528E94EF4855E840648011 /* Pods_MorehouseDPSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */; };
 		7A1051D1C36BE0D518E8F24E /* Pods_MorehouseDPSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */; };
+		AA169FDE1EEA2A7600765799 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA169FDD1EEA2A7600765799 /* Books.swift */; };
 		AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */; };
 		AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
@@ -48,6 +49,7 @@
 		2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.release.xcconfig"; sourceTree = "<group>"; };
 		942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.release.xcconfig"; sourceTree = "<group>"; };
 		AA0F52121ED40A2A008CF619 /* MorehouseDPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MorehouseDPS.entitlements; sourceTree = "<group>"; };
+		AA169FDD1EEA2A7600765799 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		AA169FDB1EEA28A000765799 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AA169FDD1EEA2A7600765799 /* Books.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA169FDE1EEA2A7600765799 /* Books.swift in Sources */,
 				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
 				AAC603F81ECEBDFD0073FF43 /* ViewController.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
