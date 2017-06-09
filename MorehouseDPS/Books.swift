@@ -12,6 +12,9 @@ import UIKit
  This is the book class. This is where the data for books is populated and sent
  to the database.
 */
+
+let dataBaseRef = AppDelegate()
+
 class Books: NSObject {
     var title: NSString?
     var author: NSString?
@@ -27,5 +30,12 @@ class Books: NSObject {
     // Set the image url for the book.
     func setImageUrl(url: NSString) -> Void {
         imageUrl = url
+    }
+    
+    // Submit the book to the database.
+    func submitBook() -> Void {
+        var ref = dataBaseRef.ref.reference()
+
+//        ref.child("Books").setValue(<#T##value: Any?##Any?#>)
     }
 }

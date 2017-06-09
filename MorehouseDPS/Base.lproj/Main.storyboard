@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Apf-cT-PGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yvA-4A-jRj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brb-FT-pS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="121"/>
+            <point key="canvasLocation" x="-743" y="-927"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F1R-Qu-ThR">
+            <objects>
+                <viewController id="yvA-4A-jRj" customClass="ViewController" customModule="MorehouseDPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NGJ-Xs-8dK"/>
+                        <viewControllerLayoutGuide type="bottom" id="oJe-vS-SfF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4fN-bq-nau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-We-mwP">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXu-Y4-RxE">
+                                <rect key="frame" x="16" y="66" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of copies" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lf-Ag-6fD">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-D9-m7R">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="4fN-bq-nau" secondAttribute="leadingMargin" id="6Wo-ww-anK"/>
+                            <constraint firstItem="I6E-D9-m7R" firstAttribute="top" secondItem="9Lf-Ag-6fD" secondAttribute="bottom" constant="8" symbolic="YES" id="6wG-dA-uGb"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="fXu-Y4-RxE" secondAttribute="leading" id="8RU-ru-G0x"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="top" secondItem="NGJ-Xs-8dK" secondAttribute="bottom" constant="8" symbolic="YES" id="FjS-u9-Jbz"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="trailing" secondItem="I6E-D9-m7R" secondAttribute="trailing" id="Hmd-Qc-hsL"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="4fN-bq-nau" secondAttribute="trailingMargin" id="Wfa-ts-rgg"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="leading" secondItem="I6E-D9-m7R" secondAttribute="leading" id="fzT-0N-CbE"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="leading" secondItem="9Lf-Ag-6fD" secondAttribute="leading" id="hm6-ck-xxc"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="trailing" secondItem="9Lf-Ag-6fD" secondAttribute="trailing" id="hzZ-Fu-c1n"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="top" secondItem="fXu-Y4-RxE" secondAttribute="bottom" constant="8" symbolic="YES" id="ods-NW-3Np"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="top" secondItem="0ke-We-mwP" secondAttribute="bottom" constant="8" symbolic="YES" id="wYT-Fj-Bwe"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="fXu-Y4-RxE" secondAttribute="trailing" id="zW6-FZ-dba"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1MV-x3-4ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647.20000000000005" y="120.98950524737631"/>
         </scene>
         <!--Item-->
         <scene sceneID="E58-7R-cjJ">
@@ -82,6 +141,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Apf-cT-PGG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ETW-92-Nir">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
