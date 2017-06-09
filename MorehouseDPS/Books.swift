@@ -16,10 +16,16 @@ class Books: NSObject {
     var title: NSString?
     var author: NSString?
     var numberOfCopies: NSNumber?
+    var imageUrl: NSString?
     
     init(newTitle: NSString, newAuthor: NSString, newNumber: NSNumber) {
         title = newTitle
         author = newAuthor
         numberOfCopies = newNumber
+    }
+    
+    // Set the image url for the book.
+    func setImageUrl(url: NSString) -> Void {
+        imageUrl = url
     }
 }
