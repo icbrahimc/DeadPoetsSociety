@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var count: Int = 0
+    
     @IBOutlet weak var bookTitleField: UITextField!
     
     @IBOutlet weak var bookAuthorField: UITextField!
@@ -39,8 +41,8 @@ class ViewController: UIViewController {
             newBook = Books(newTitle: title as NSString, newAuthor: author as NSString, newNumber: Int(number)! as NSNumber)
             newBook?.setImageUrl(url: image as NSString)
             
-            newBook?.submitBook()
-            
+            newBook?.submitBook(count: String(count))
+            count += 1
             self.clearTextFields()
         }
     }

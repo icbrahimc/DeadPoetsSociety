@@ -15,6 +15,7 @@ import UIKit
 */
 
 let dataBaseRef = AppDelegate()
+let defaultURl = "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi5r62cirLUAhVLoJQKHf7cAX8QjRwIBw&url=https%3A%2F%2Fwww.amazon.com%2F1984-Signet-Classics-George-Orwell%2Fdp%2F0451524934&psig=AFQjCNEHhSAkcy_Rpojr_16xaKCJmsaaQQ&ust=1497141957568448"
 
 class Books: NSObject {
     var title: NSString?
@@ -34,16 +35,19 @@ class Books: NSObject {
     }
     
     // Submit the book to the database.
-    func submitBook() -> Void {
+    func submitBook(count: String) -> Void {
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
 
         // Set up the NSDictionary.
-        var dataDic: NSDictionary!
-        dataDic = NSDictionary(dictionary: ["author": author ?? NSString(string: "Ibrahim")])
-        
+        let dataDic: NSDictionary = [
+            "title": title ?? NSString(string: "Ibrahim"),
+            "author": author ?? NSString(string: "Ibrahim"),
+            "copies": numberOfCopies ?? NSNumber(integerLiteral: 0),
+            "imageUrl": imageUrl ?? NSString(string: defaultURl)
+        ]
         
 //        dataDic.setValuesForKeys(["author": author ?? NSString(string: "Ibrahim")])
-        ref.child("Books").child(title! as String).setValue(dataDic)
+        ref.child("Books").child(count).setValue(dataDic)
     }
 }
