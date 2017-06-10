@@ -64,23 +64,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcN-8U-Crz">
+                                <rect key="frame" x="151" y="180" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="ACk-81-Ac5"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="yvA-4A-jRj" eventType="touchUpInside" id="KcH-rQ-cuj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="4fN-bq-nau" secondAttribute="leadingMargin" id="6Wo-ww-anK"/>
-                            <constraint firstItem="I6E-D9-m7R" firstAttribute="top" secondItem="9Lf-Ag-6fD" secondAttribute="bottom" constant="8" symbolic="YES" id="6wG-dA-uGb"/>
-                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="fXu-Y4-RxE" secondAttribute="leading" id="8RU-ru-G0x"/>
-                            <constraint firstItem="0ke-We-mwP" firstAttribute="top" secondItem="NGJ-Xs-8dK" secondAttribute="bottom" constant="8" symbolic="YES" id="FjS-u9-Jbz"/>
-                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="trailing" secondItem="I6E-D9-m7R" secondAttribute="trailing" id="Hmd-Qc-hsL"/>
-                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="4fN-bq-nau" secondAttribute="trailingMargin" id="Wfa-ts-rgg"/>
-                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="leading" secondItem="I6E-D9-m7R" secondAttribute="leading" id="fzT-0N-CbE"/>
-                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="leading" secondItem="9Lf-Ag-6fD" secondAttribute="leading" id="hm6-ck-xxc"/>
-                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="trailing" secondItem="9Lf-Ag-6fD" secondAttribute="trailing" id="hzZ-Fu-c1n"/>
-                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="top" secondItem="fXu-Y4-RxE" secondAttribute="bottom" constant="8" symbolic="YES" id="ods-NW-3Np"/>
-                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="top" secondItem="0ke-We-mwP" secondAttribute="bottom" constant="8" symbolic="YES" id="wYT-Fj-Bwe"/>
-                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="fXu-Y4-RxE" secondAttribute="trailing" id="zW6-FZ-dba"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="4fN-bq-nau" secondAttribute="trailingMargin" id="43E-I9-XXj"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="trailing" secondItem="I6E-D9-m7R" secondAttribute="trailing" id="4TA-be-UUw"/>
+                            <constraint firstItem="I6E-D9-m7R" firstAttribute="top" secondItem="9Lf-Ag-6fD" secondAttribute="bottom" constant="8" symbolic="YES" id="8v6-9K-MmV"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="top" secondItem="NGJ-Xs-8dK" secondAttribute="bottom" constant="8" symbolic="YES" id="Pq6-On-YMI"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="leading" secondItem="I6E-D9-m7R" secondAttribute="leading" id="QCe-zM-zQJ"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="trailing" secondItem="9Lf-Ag-6fD" secondAttribute="trailing" id="Tld-Ph-pnU"/>
+                            <constraint firstItem="9Lf-Ag-6fD" firstAttribute="top" secondItem="fXu-Y4-RxE" secondAttribute="bottom" constant="8" symbolic="YES" id="XAP-Xx-Ol4"/>
+                            <constraint firstItem="IcN-8U-Crz" firstAttribute="top" secondItem="I6E-D9-m7R" secondAttribute="bottom" constant="8" symbolic="YES" id="bO8-7p-883"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="fXu-Y4-RxE" secondAttribute="leading" id="bhj-ZE-uOu"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="leading" secondItem="4fN-bq-nau" secondAttribute="leadingMargin" id="hOq-qb-v0T"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="leading" secondItem="9Lf-Ag-6fD" secondAttribute="leading" id="i4x-eQ-giz"/>
+                            <constraint firstItem="0ke-We-mwP" firstAttribute="trailing" secondItem="fXu-Y4-RxE" secondAttribute="trailing" id="jjv-6f-nw8"/>
+                            <constraint firstItem="I6E-D9-m7R" firstAttribute="centerX" secondItem="IcN-8U-Crz" secondAttribute="centerX" id="kqD-OO-3KA"/>
+                            <constraint firstItem="fXu-Y4-RxE" firstAttribute="top" secondItem="0ke-We-mwP" secondAttribute="bottom" constant="8" symbolic="YES" id="zlQ-Lq-YWv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookAuthorField" destination="fXu-Y4-RxE" id="GDt-XO-06b"/>
+                        <outlet property="bookTitleField" destination="0ke-We-mwP" id="g7s-Mx-rOZ"/>
+                        <outlet property="copiesField" destination="9Lf-Ag-6fD" id="l1u-k6-7cF"/>
+                        <outlet property="imageField" destination="I6E-D9-m7R" id="l7n-yU-QFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1MV-x3-4ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

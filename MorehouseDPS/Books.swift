@@ -6,6 +6,7 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import FirebaseDatabase
 import UIKit
 
 /*
@@ -34,8 +35,15 @@ class Books: NSObject {
     
     // Submit the book to the database.
     func submitBook() -> Void {
-        var ref = dataBaseRef.ref.reference()
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
 
-//        ref.child("Books").setValue(<#T##value: Any?##Any?#>)
+        // Set up the NSDictionary.
+        var dataDic: NSDictionary!
+        dataDic = NSDictionary(dictionary: ["author": author ?? NSString(string: "Ibrahim")])
+        
+        
+//        dataDic.setValuesForKeys(["author": author ?? NSString(string: "Ibrahim")])
+        ref.child("Books").child(title! as String).setValue(dataDic)
     }
 }
