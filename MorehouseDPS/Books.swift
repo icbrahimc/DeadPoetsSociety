@@ -36,8 +36,8 @@ class Books: NSObject {
     
     // Submit the book to the database.
     func submitBook(count: String) -> Void {
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
 
         // Set up the NSDictionary.
         let dataDic: NSDictionary = [
