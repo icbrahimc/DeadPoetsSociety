@@ -16,8 +16,6 @@ import FBSDKCoreKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var ref: FIRDatabase!
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,13 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         // Firebase sdk delegate.
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         // The main view controller for the application.
         window = UIWindow(frame: UIScreen.main.bounds)
         _ = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let _ = user {
-                let homeViewController = HomeViewController()
+                let homeViewController = BookCollectionViewController()
                 homeViewController.view.backgroundColor = UIColor.white
                 self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
                 self.window!.makeKeyAndVisible()
