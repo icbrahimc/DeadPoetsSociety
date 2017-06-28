@@ -8,36 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FirebaseDatabase
 import FBSDKCoreKit
-
-/*
- 
- //  AppDelegate.m
- #import <FBSDKCoreKit/FBSDKCoreKit.h>
- 
- - (BOOL)application:(UIApplication *)application
- didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
- 
- [[FBSDKApplicationDelegate sharedInstance] application:application
- didFinishLaunchingWithOptions:launchOptions];
- // Add any custom logic here.
- return YES;
- }
- 
- - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
- sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
- 
- BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
- openURL:url
- sourceApplication:sourceApplication
- annotation:annotation
- ];
- // Add any custom logic here.
- return handled;
- }
- 
- */
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,8 +24,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Facebook sdk delegate.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         // Firebase sdk delegate.
         FIRApp.configure()
+        
+        // The main view controller for the application.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let _ = user {
+                let homeViewController = HomeViewController()
+                homeViewController.view.backgroundColor = UIColor.white
+                self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
+                self.window!.makeKeyAndVisible()
+            } else {
+                let loginViewController = LoginViewController()
+                loginViewController.view.backgroundColor = UIColor.white
+                self.window!.rootViewController = UINavigationController(rootViewController: loginViewController)
+                self.window!.makeKeyAndVisible()
+            }
+        }
         return true
     }
     

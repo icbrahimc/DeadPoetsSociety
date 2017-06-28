@@ -19,7 +19,6 @@
 		AAA342FC1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */; };
 		AAC603F81ECEBDFD0073FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC603F71ECEBDFD0073FF43 /* ViewController.swift */; };
-		AAC603FB1ECEBDFD0073FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC603F91ECEBDFD0073FF43 /* Main.storyboard */; };
 		AAC603FD1ECEBDFD0073FF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC603FC1ECEBDFD0073FF43 /* Assets.xcassets */; };
 		AAC604001ECEBDFD0073FF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC603FE1ECEBDFD0073FF43 /* LaunchScreen.storyboard */; };
 		AAC6040B1ECEBDFD0073FF43 /* MorehouseDPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6040A1ECEBDFD0073FF43 /* MorehouseDPSTests.swift */; };
@@ -57,7 +56,6 @@
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC603F71ECEBDFD0073FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AAC603FA1ECEBDFD0073FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAC603FC1ECEBDFD0073FF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC603FF1ECEBDFD0073FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAC604011ECEBDFD0073FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */,
 				AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */,
 				AAC603F71ECEBDFD0073FF43 /* ViewController.swift */,
-				AAC603F91ECEBDFD0073FF43 /* Main.storyboard */,
 				AAC603FC1ECEBDFD0073FF43 /* Assets.xcassets */,
 				AAC603FE1ECEBDFD0073FF43 /* LaunchScreen.storyboard */,
 				AAC604011ECEBDFD0073FF43 /* Info.plist */,
@@ -327,7 +324,6 @@
 				AAC604001ECEBDFD0073FF43 /* LaunchScreen.storyboard in Resources */,
 				AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */,
 				AAC603FD1ECEBDFD0073FF43 /* Assets.xcassets in Resources */,
-				AAC603FB1ECEBDFD0073FF43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,14 +529,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AAC603F91ECEBDFD0073FF43 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAC603FA1ECEBDFD0073FF43 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AAC603FE1ECEBDFD0073FF43 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

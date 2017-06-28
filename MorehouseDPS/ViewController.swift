@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var count: Int = 0
+    var count: Int = 9
     
     @IBOutlet weak var bookTitleField: UITextField!
     
