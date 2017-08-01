@@ -6,6 +6,7 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 import UIKit
@@ -13,4 +14,9 @@ import UIKit
 class BookAPI: NSObject {
     static let sharedInstance = BookAPI()
     private let rootDB: DatabaseReference! = Database.database().reference()
+    
+    /**
+      Fetch book information.
+    */
+    
 }
