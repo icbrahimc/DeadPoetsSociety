@@ -13,6 +13,7 @@
 		AA169FDE1EEA2A7600765799 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA169FDD1EEA2A7600765799 /* Books.swift */; };
 		AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */; };
 		AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */; };
+		AA82D5B21F30588B0067E8FB /* BookCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B11F30588B0067E8FB /* BookCollectionLayout.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
 		AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FB1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
@@ -50,6 +51,7 @@
 		AA169FDD1EEA2A7600765799 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA82D5B11F30588B0067E8FB /* BookCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionLayout.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 			children = (
 				AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */,
 				AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */,
+				AA82D5B11F30588B0067E8FB /* BookCollectionLayout.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA82D5B21F30588B0067E8FB /* BookCollectionLayout.swift in Sources */,
 				AA169FDE1EEA2A7600765799 /* Books.swift in Sources */,
 				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,

@@ -28,19 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // The main view controller for the application.
         window = UIWindow(frame: UIScreen.main.bounds)
-        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if let _ = user {
-                let homeViewController = BookCollectionViewController()
-                homeViewController.view.backgroundColor = UIColor.white
-                self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
-                self.window!.makeKeyAndVisible()
-            } else {
-                let loginViewController = LoginViewController()
-                loginViewController.view.backgroundColor = UIColor.white
-                self.window!.rootViewController = UINavigationController(rootViewController: loginViewController)
-                self.window!.makeKeyAndVisible()
-            }
-        }
+        let homeViewController = BookCollectionViewController(collectionViewLayout: BookCollectionLayout())
+        homeViewController.view.backgroundColor = UIColor.white
+        self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
+        self.window!.makeKeyAndVisible()
         return true
     }
     
