@@ -23,7 +23,6 @@ class BookCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         // Do any additional setup after loading the view.
     }
 

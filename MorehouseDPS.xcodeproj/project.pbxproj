@@ -10,12 +10,12 @@
 		582115DB68FB2EB209723E4D /* Pods_MorehouseDPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F44DA69933099688C86B5 /* Pods_MorehouseDPS.framework */; };
 		77528E94EF4855E840648011 /* Pods_MorehouseDPSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4FF4906227EF0DEECC908 /* Pods_MorehouseDPSTests.framework */; };
 		7A1051D1C36BE0D518E8F24E /* Pods_MorehouseDPSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9AA3AE5DC8282A3DBA55C7 /* Pods_MorehouseDPSUITests.framework */; };
-		AA169FDE1EEA2A7600765799 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA169FDD1EEA2A7600765799 /* Books.swift */; };
 		AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */; };
 		AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */; };
 		AA82D5B21F30588B0067E8FB /* BookCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B11F30588B0067E8FB /* BookCollectionLayout.swift */; };
 		AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B41F3059AE0067E8FB /* BookAPI.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
+		AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */; };
 		AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FB1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FC1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
@@ -49,12 +49,12 @@
 		2554F667485D520E9585357D /* Pods-MorehouseDPSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPSTests/Pods-MorehouseDPSTests.release.xcconfig"; sourceTree = "<group>"; };
 		942F8F4DF9518654A6F4CDE1 /* Pods-MorehouseDPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorehouseDPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MorehouseDPS/Pods-MorehouseDPS.release.xcconfig"; sourceTree = "<group>"; };
 		AA0F52121ED40A2A008CF619 /* MorehouseDPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MorehouseDPS.entitlements; sourceTree = "<group>"; };
-		AA169FDD1EEA2A7600765799 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		AA6668DE1EE7E7D100DFABBB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA82D5B11F30588B0067E8FB /* BookCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionLayout.swift; sourceTree = "<group>"; };
 		AA82D5B41F3059AE0067E8FB /* BookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		AA169FDB1EEA28A000765799 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AA169FDD1EEA2A7600765799 /* Books.swift */,
+				AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -501,8 +501,8 @@
 			files = (
 				AA82D5B21F30588B0067E8FB /* BookCollectionLayout.swift in Sources */,
 				AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */,
-				AA169FDE1EEA2A7600765799 /* Books.swift in Sources */,
 				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
+				AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
 				AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */,
 				AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */,

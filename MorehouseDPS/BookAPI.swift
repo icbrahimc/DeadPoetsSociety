@@ -9,14 +9,23 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import SwiftyJSON
 import UIKit
 
 class BookAPI: NSObject {
     static let sharedInstance = BookAPI()
-    private let rootDB: DatabaseReference! = Database.database().reference()
+    static let rootDB: DatabaseReference! = Database.database().reference()
     
     /**
       Fetch book information.
     */
+    func fetchBooks() -> [JSON] {
+        var returnDic: [JSON] = []
+        rootDB.child("Books").observe(.value, with: { (snapshot) in
+            print(snapshot)
+        })
+        print(returnDic)
+        return returnDic
+    }
     
 }
