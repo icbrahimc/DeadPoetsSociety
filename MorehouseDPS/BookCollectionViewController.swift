@@ -6,6 +6,8 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import FirebaseDatabase
+import SwiftyJSON
 import UIKit
 
 private let reuseIdentifier = "bookCollectionViewCell"
@@ -15,6 +17,8 @@ fileprivate let itemsPerRow: CGFloat = 3
 
 class BookCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var books: [Books] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +27,19 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
 
         // Register cell classes
         self.collectionView!.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        BookAPI.rootDB.child("Books").observe(.value, with: { (snapshot) in
+            for rest in snapshot.children.allObjects as! [DataSnapshot] {
+                let snapJSON = JSON(rest.value)
+                let title = snapJSON["title"].stringValue
+                let author = snapJSON["author"].stringValue
+                let imageURL = snapJSON["imageURL"].stringValue
+                let copies = snapJSON["copies"].intValue
+                
+                self.books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
+            }
+            self.collectionView?.reloadData()
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -45,7 +62,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return books.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
