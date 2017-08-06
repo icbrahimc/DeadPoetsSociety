@@ -9,8 +9,8 @@
 import UIKit
 
 class BookCollectionLayout: UICollectionViewFlowLayout {
-    let innerSpace: CGFloat = 10.0
-    let numberOfCellsOnRow: CGFloat = 3
+    let innerSpace: CGFloat = 20.0
+    let numberOfCellsOnRow: CGFloat = 5
     override init() {
         super.init()
         self.minimumLineSpacing = innerSpace

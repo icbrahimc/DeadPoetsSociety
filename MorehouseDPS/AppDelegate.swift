@@ -28,8 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // The main view controller for the application.
         window = UIWindow(frame: UIScreen.main.bounds)
-        let homeViewController = BookCollectionViewController(collectionViewLayout: BookCollectionLayout())
-        homeViewController.view.backgroundColor = UIColor.white
+        let collectionLayout = UICollectionViewFlowLayout()
+        let homeViewController = BookCollectionViewController(collectionViewLayout: collectionLayout)
+        homeViewController.view.backgroundColor = UIColor.red
         self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
         self.window!.makeKeyAndVisible()
         return true
