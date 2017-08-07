@@ -26,14 +26,14 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(BookCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         BookAPI.rootDB.child("Books").observe(.value, with: { (snapshot) in
             for rest in snapshot.children.allObjects as! [DataSnapshot] {
                 let snapJSON = JSON(rest.value)
                 let title = snapJSON["title"].stringValue
                 let author = snapJSON["author"].stringValue
-                let imageURL = snapJSON["imageURL"].stringValue
+                let imageURL = snapJSON["imageUrl"].stringValue
                 let copies = snapJSON["copies"].intValue
                 
                 self.books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
@@ -66,16 +66,35 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BookCollectionViewCell
-    
-        cell.backgroundColor = UIColor.white
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BookCell
         // Configure the cell
-    
+        cell.book = books[indexPath.row]
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 200)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: self.view.frame.height / 3)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 
     // MARK: UICollectionViewDelegate
@@ -108,36 +127,42 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
     
     }
     */
-
 }
 
-/*
-extension BookCollectionViewController : UICollectionViewDelegateFlowLayout {
-    //1
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //2
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
+class BookCell: UICollectionViewCell {
+    var book: Books? {
+        didSet {
+            //let url = URL(fileURLWithPath: (book?.imageURL)!)
+            let url = URL(string: (book?.imageURL)!)
+            do {
+                let data = try Data(contentsOf: url!)
+                bookImage.image = UIImage(data: data)
+            } catch   {
+                print("Hey")
+            }
+            //let data = try Data(contentsOf: url)
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .red
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        setupView()
     }
     
-    //3
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
+    let bookImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.blue
+        return imageView
+    }()
+    
+    func setupView() {
+        addSubview(bookImage)
+        bookImage.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
     }
     
-    // 4
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
- */
-

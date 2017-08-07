@@ -148,6 +148,13 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		AA9EFBBD1F37E01500F7BF01 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		AAC603E91ECEBDFD0073FF43 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +180,7 @@
 		AAC603F41ECEBDFD0073FF43 /* MorehouseDPS */ = {
 			isa = PBXGroup;
 			children = (
+				AA9EFBBD1F37E01500F7BF01 /* Cell */,
 				AA82D5B31F30598F0067E8FB /* API */,
 				AA169FDC1EEA28B100765799 /* ViewControllers */,
 				AA169FDB1EEA28A000765799 /* Models */,
