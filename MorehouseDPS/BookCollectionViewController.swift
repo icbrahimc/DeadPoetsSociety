@@ -28,7 +28,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         // Register cell classes
         self.collectionView!.register(BookCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        BookAPI.rootDB.child("Books").observe(.value, with: { (snapshot) in
+        BookAPI.rootDB.child("books").observe(.value, with: { (snapshot) in
             for rest in snapshot.children.allObjects as! [DataSnapshot] {
                 let snapJSON = JSON(rest.value)
                 let title = snapJSON["title"].stringValue
@@ -80,7 +80,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: self.view.frame.height / 3)
+        return CGSize(width: widthPerItem, height: self.view.frame.height / 4)
     }
     
     //3
@@ -137,8 +137,8 @@ class BookCell: UICollectionViewCell {
             do {
                 let data = try Data(contentsOf: url!)
                 bookImage.image = UIImage(data: data)
-            } catch   {
-                print("Hey")
+            } catch {
+                print("Could not retrieve image")
             }
             //let data = try Data(contentsOf: url)
         }
@@ -153,7 +153,7 @@ class BookCell: UICollectionViewCell {
     
     let bookImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
+        imageView.backgroundColor = UIColor.white
         return imageView
     }()
     

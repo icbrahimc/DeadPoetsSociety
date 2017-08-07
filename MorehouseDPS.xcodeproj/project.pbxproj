@@ -15,6 +15,7 @@
 		AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B41F3059AE0067E8FB /* BookAPI.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
 		AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */; };
+		AA9EFBBF1F383EA900F7BF01 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EFBBE1F383EA900F7BF01 /* CustomImageView.swift */; };
 		AAA342FA1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FB1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
 		AAA342FC1ECEC50B007E8874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */; };
@@ -53,6 +54,7 @@
 		AA82D5B41F3059AE0067E8FB /* BookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		AA9EFBBE1F383EA900F7BF01 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAC603F21ECEBDFD0073FF43 /* MorehouseDPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorehouseDPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,11 +150,12 @@
 			name = API;
 			sourceTree = "<group>";
 		};
-		AA9EFBBD1F37E01500F7BF01 /* Cell */ = {
+		AA9EFBBD1F37E01500F7BF01 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				AA9EFBBE1F383EA900F7BF01 /* CustomImageView.swift */,
 			);
-			name = Cell;
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		AAC603E91ECEBDFD0073FF43 = {
@@ -180,7 +183,7 @@
 		AAC603F41ECEBDFD0073FF43 /* MorehouseDPS */ = {
 			isa = PBXGroup;
 			children = (
-				AA9EFBBD1F37E01500F7BF01 /* Cell */,
+				AA9EFBBD1F37E01500F7BF01 /* Helper */,
 				AA82D5B31F30598F0067E8FB /* API */,
 				AA169FDC1EEA28B100765799 /* ViewControllers */,
 				AA169FDB1EEA28A000765799 /* Models */,
@@ -507,6 +510,7 @@
 				AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */,
 				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
 				AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */,
+				AA9EFBBF1F383EA900F7BF01 /* CustomImageView.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
 				AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */,
 				AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */,
