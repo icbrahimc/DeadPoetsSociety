@@ -72,6 +72,10 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(books[indexPath.row])
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -132,15 +136,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
 class BookCell: UICollectionViewCell {
     var book: Books? {
         didSet {
-            //let url = URL(fileURLWithPath: (book?.imageURL)!)
-            let url = URL(string: (book?.imageURL)!)
-            do {
-                let data = try Data(contentsOf: url!)
-                bookImage.image = UIImage(data: data)
-            } catch {
-                print("Could not retrieve image")
-            }
-            //let data = try Data(contentsOf: url)
+            bookImage.loadImageUsingUrlString((book?.imageURL)!)
         }
     }
     
@@ -151,8 +147,8 @@ class BookCell: UICollectionViewCell {
         setupView()
     }
     
-    let bookImage: UIImageView = {
-        let imageView = UIImageView()
+    let bookImage: CustomImageView = {
+        let imageView = CustomImageView()
         imageView.backgroundColor = UIColor.white
         return imageView
     }()
