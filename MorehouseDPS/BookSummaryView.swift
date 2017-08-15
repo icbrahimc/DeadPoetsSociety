@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookSummaryView: UIView {
+class BookSummaryView: UIScrollView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -20,6 +20,18 @@ class BookSummaryView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
+        setupHeaderView()
+    }
+    
+    let headerView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: (UIApplication.shared.keyWindow?.bounds.size.width)!, height: (UIApplication.shared.keyWindow?.bounds.size.height)! / 3))
+        view.backgroundColor = .red
+        return view
+    }()
+    
+    func setupHeaderView() {
+        self.addSubview(headerView)
     }
     
     required init?(coder aDecoder: NSCoder) {

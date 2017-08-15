@@ -13,6 +13,8 @@ class BookSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.view = BookSummaryHeaderView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.view.layoutSubviews()
         // Do any additional setup after loading the view.
     }
 

@@ -12,6 +12,7 @@ target 'MorehouseDPS' do
 	pod 'FBSDKShareKit'
 	pod 'FBSDKLoginKit'
 	pod 'Firebase/Database'
+	pod 'LBTAComponents'
 	pod 'SwiftyJSON'
 
   target 'MorehouseDPSTests' do
