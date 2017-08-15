@@ -77,6 +77,8 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.gray.cgColor
+        let BookVC = BookSummaryViewController()
+        navigationController?.pushViewController(BookVC, animated: false)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
