@@ -13,5 +13,10 @@ import SwiftyJSON
 import UIKit
 
 class BookAPI: NSObject {
+    static let sharedInstance = BookAPI()
     static let rootDB: DatabaseReference! = Database.database().reference()
+    
+    func fetchBooks(completion: () -> ()) {
+        //
+    }
 }
