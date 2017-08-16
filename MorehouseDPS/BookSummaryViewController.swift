@@ -12,13 +12,19 @@ import UIKit
 class BookSummaryHeaderCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .black
+        backgroundColor = .white
+        
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor.black
         
         addSubview(thumbNail)
         addSubview(titleLabel)
+        addSubview(authorLabel)
         
         // Anchors
-        thumbNail.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 30, heightConstant: 90)
+        thumbNail.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 90, heightConstant: 150)
+        titleLabel.anchor(self.topAnchor, left: thumbNail.rightAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        authorLabel.anchor(titleLabel.bottomAnchor, left: nil, bottom: nil, right: titleLabel.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
     }
     
     let thumbNail: CustomImageView = {
@@ -33,6 +39,13 @@ class BookSummaryHeaderCell: DatasourceCell {
         title.text = "Morehouse Dead Poets Society"
         title.font = UIFont.boldSystemFont(ofSize: 14)
         return title
+    }()
+    
+    let authorLabel: UILabel = {
+        let author = UILabel()
+        author.text = "By: Ibrahim Conteh"
+        author.font = UIFont.systemFont(ofSize: 10)
+        return author
     }()
 }
 
@@ -58,7 +71,7 @@ class BookSummaryViewController: DatasourceController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 200)
     }
     
 
