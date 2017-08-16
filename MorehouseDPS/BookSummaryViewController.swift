@@ -6,21 +6,45 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import LBTAComponents
 import UIKit
 
-class BookSummaryViewController: UIViewController {
+class BookSummaryHeaderCell: DatasourceCell {
+    override func setupViews() {
+        super.setupViews()
+        backgroundColor = .green
+    }
+    
+    let thumbNail: CustomImageView = {
+        let imageView = CustomImageView()
+        imageView.image = #imageLiteral(resourceName: "LaunchScreen")
+        return imageView
+    }()
+}
+
+class BookSummaryDataSource: Datasource {
+    override func headerClasses() -> [DatasourceCell.Type]? {
+        return [BookSummaryHeaderCell.self]
+    }
+}
+
+class BookSummaryViewController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.view = BookSummaryHeaderView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        self.view.layoutSubviews()
+        let dataSource = BookSummaryDataSource()
+        self.datasource = dataSource
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
     }
     
 
