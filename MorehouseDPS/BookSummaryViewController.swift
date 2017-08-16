@@ -12,13 +12,27 @@ import UIKit
 class BookSummaryHeaderCell: DatasourceCell {
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .green
+        backgroundColor = .black
+        
+        addSubview(thumbNail)
+        addSubview(titleLabel)
+        
+        // Anchors
+        thumbNail.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 30, heightConstant: 90)
     }
     
     let thumbNail: CustomImageView = {
         let imageView = CustomImageView()
-        imageView.image = #imageLiteral(resourceName: "LaunchScreen")
+        let profileImage: UIImage = #imageLiteral(resourceName: "LaunchScreen")
+        imageView.image = profileImage
         return imageView
+    }()
+    
+    let titleLabel: UILabel = {
+        let title = UILabel()
+        title.text = "Morehouse Dead Poets Society"
+        title.font = UIFont.boldSystemFont(ofSize: 14)
+        return title
     }()
 }
 
