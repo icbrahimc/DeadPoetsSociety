@@ -28,10 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // The main view controller for the application.
         window = UIWindow(frame: UIScreen.main.bounds)
-        let collectionLayout = UICollectionViewFlowLayout()
+        
+        // Home controllers.
         let homeViewController = BookCollectionViewController()
         homeViewController.view.backgroundColor = UIColor.red
-        self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
+        let homeNav = UINavigationController(rootViewController: homeViewController)
+        homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeLib"), tag: 1)
+        
+        let tabController = UITabBarController()
+        tabController.viewControllers = [homeNav]
+        
+        self.window!.rootViewController = tabController
         self.window!.makeKeyAndVisible()
         return true
     }
