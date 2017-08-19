@@ -16,6 +16,7 @@ class BookAPI: NSObject {
     static let sharedInstance = BookAPI()
     private let rootDB: DatabaseReference! = Database.database().reference()
     
+    /** Fetch all books from the database */
     func fetchBooks(completion: @escaping (BookDataSource, [Books]) -> ()) {
         let bookDataSource = BookDataSource()
         var books: [Books] = []

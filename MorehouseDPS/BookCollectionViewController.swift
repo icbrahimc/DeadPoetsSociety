@@ -79,11 +79,12 @@ class BookCollectionViewController: DatasourceController {
 //    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.gray.cgColor
-        let BookVC = BookSummaryViewController()
-        navigationController?.pushViewController(BookVC, animated: false)
+        if let bookData = self.datasource?.item(indexPath) as? Books {
+            // Instantiate the BookSummaryVC and assign the book data to the VC.
+            let BookVC = BookSummaryViewController()
+            BookVC.bookData = bookData
+            navigationController?.pushViewController(BookVC, animated: false)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

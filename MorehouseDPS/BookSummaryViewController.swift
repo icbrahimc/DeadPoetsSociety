@@ -24,6 +24,7 @@ class BookSummaryDataSource: Datasource {
 }
 
 class BookSummaryViewController: DatasourceController {
+    var bookData: Books?
 
     override func viewDidLoad() {
         super.viewDidLoad()
