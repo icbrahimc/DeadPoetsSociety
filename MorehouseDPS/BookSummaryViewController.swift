@@ -18,6 +18,8 @@ class BookSummaryViewController: DatasourceController {
         let dataSource = BookSummaryDataSource()
         dataSource.book = bookData
         self.datasource = dataSource
+        
+        navigationItem.title = "Book Summary"
         // Do any additional setup after loading the view.
     }
 

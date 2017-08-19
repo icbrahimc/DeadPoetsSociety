@@ -26,6 +26,11 @@ class BookCell: DatasourceCell {
     let bookImage: CustomImageView = {
         let imageView = CustomImageView()
         imageView.backgroundColor = UIColor.white
+        imageView.layer.shadowColor = UIColor.black.cgColor;
+        imageView.layer.shadowOffset = CGSize(width: 1, height: 1);
+        imageView.layer.shadowOpacity = 0.5;
+        imageView.layer.shadowRadius = 3.0;
+        imageView.clipsToBounds = false;
         return imageView
     }()
 }
@@ -89,6 +94,11 @@ class BookSummaryHeaderCell: DatasourceCell {
     
     let thumbNail: CustomImageView = {
         let imageView = CustomImageView()
+        imageView.layer.shadowColor = UIColor.black.cgColor;
+        imageView.layer.shadowOffset = CGSize(width: 1, height: 1);
+        imageView.layer.shadowOpacity = 0.5;
+        imageView.layer.shadowRadius = 3.0;
+        imageView.clipsToBounds = false;
         return imageView
     }()
     
