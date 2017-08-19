@@ -12,5 +12,9 @@ import SwiftyJSON
 
 class BookDataSource: Datasource {
     let books: [Books] = []
+    
+    override func cellClasses() -> [DatasourceCell.Type] {
+        return [BookCell.self]
+    }
 }
 

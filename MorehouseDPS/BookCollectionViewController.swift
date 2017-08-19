@@ -26,20 +26,20 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(BookCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(BooksCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        BookAPI.rootDB.child("books").observe(.value, with: { (snapshot) in
-            for rest in snapshot.children.allObjects as! [DataSnapshot] {
-                let snapJSON = JSON(rest.value)
-                let title = snapJSON["title"].stringValue
-                let author = snapJSON["author"].stringValue
-                let imageURL = snapJSON["imageUrl"].stringValue
-                let copies = snapJSON["copies"].intValue
-                
-                self.books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
-            }
-            self.collectionView?.reloadData()
-        })
+//        BookAPI.rootDB.child("books").observe(.value, with: { (snapshot) in
+//            for rest in snapshot.children.allObjects as! [DataSnapshot] {
+//                let snapJSON = JSON(rest.value)
+//                let title = snapJSON["title"].stringValue
+//                let author = snapJSON["author"].stringValue
+//                let imageURL = snapJSON["imageUrl"].stringValue
+//                let copies = snapJSON["copies"].intValue
+//                
+//                self.books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
+//            }
+//            self.collectionView?.reloadData()
+//        })
         // Do any additional setup after loading the view.
     }
 
@@ -66,7 +66,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BookCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BooksCell
         // Configure the cell
         cell.book = books[indexPath.row]
         return cell
@@ -144,7 +144,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
     */
 }
 
-class BookCell: UICollectionViewCell {
+class BooksCell: UICollectionViewCell {
     var book: Books? {
         didSet {
             bookImage.loadImageUsingUrlString((book?.imageURL)!)
