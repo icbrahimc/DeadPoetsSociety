@@ -41,13 +41,6 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // Check if the user has signed.
-        let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            // ...
-        }
-    }
-    
     /** Facebook Auth */
     func handleFaceBookLogin() {
         FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self, handler: {
@@ -71,9 +64,8 @@ class LoginViewController: UIViewController {
                 }
                 
                 // If the user is signed in and authenticated, segue to a new view controller.
-                if let _ = user {
-//                    let homeController = HomeViewController()
-//                    self.navigationController?.pushViewController(homeController, animated: true)
+                if user != nil {
+                    self.navigationController?.popToRootViewController(animated: true)
                 }
             }
         })

@@ -16,6 +16,11 @@ class BookAPI: NSObject {
     static let sharedInstance = BookAPI()
     private let rootDB: DatabaseReference! = Database.database().reference()
     
+    /** Create user */
+    func createUser(uuid: String) {
+//        rootDB.
+    }
+    
     /** Fetch all books from the database */
     func fetchBooks(completion: @escaping (BookDataSource, [Books]) -> ()) {
         let bookDataSource = BookDataSource()

@@ -6,6 +6,7 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import FirebaseAuth
 import FirebaseDatabase
 import LBTAComponents
 import SwiftyJSON
@@ -22,6 +23,13 @@ class BookCollectionViewController: DatasourceController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        
+        let _ = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let loginVC = LoginViewController()
+                self.present(loginVC, animated: true, completion: nil)
+            }
+        })
         
         BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource, books) in
             bookDataSource.books = books
