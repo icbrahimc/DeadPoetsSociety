@@ -35,8 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeNav = UINavigationController(rootViewController: homeViewController)
         homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeLib"), tag: 1)
         
+        // Stream controllers.
+        let streamViewController = StreamViewController()
+        let streamNav = UINavigationController(rootViewController: streamViewController)
+        streamNav.tabBarItem = UITabBarItem(title: "Notifications", image: #imageLiteral(resourceName: "notifcation"), tag: 1)
+        
+        // User controllers.
+        let userViewController = UserViewController()
+        let userNav = UINavigationController(rootViewController: userViewController)
+        userNav.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "user"), tag: 1)
+        
         let tabController = UITabBarController()
-        tabController.viewControllers = [homeNav]
+        tabController.viewControllers = [homeNav, streamNav, userNav]
         
         self.window!.rootViewController = tabController
         self.window!.makeKeyAndVisible()

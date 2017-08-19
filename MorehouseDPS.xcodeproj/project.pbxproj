@@ -17,6 +17,8 @@
 		AA7878EA1F47ECA400066398 /* BookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878E91F47ECA400066398 /* BookDataSource.swift */; };
 		AA7878EC1F47F5A500066398 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878EB1F47F5A500066398 /* Cells.swift */; };
 		AA7878EE1F4805D600066398 /* BookSummaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878ED1F4805D600066398 /* BookSummaryDataSource.swift */; };
+		AA7878F11F4815B100066398 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878F01F4815B100066398 /* UserViewController.swift */; };
+		AA7878F31F4815C100066398 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878F21F4815C100066398 /* StreamViewController.swift */; };
 		AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B41F3059AE0067E8FB /* BookAPI.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
 		AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */; };
@@ -62,6 +64,8 @@
 		AA7878E91F47ECA400066398 /* BookDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataSource.swift; sourceTree = "<group>"; };
 		AA7878EB1F47F5A500066398 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		AA7878ED1F4805D600066398 /* BookSummaryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSummaryDataSource.swift; sourceTree = "<group>"; };
+		AA7878F01F4815B100066398 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		AA7878F21F4815C100066398 /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		AA82D5B41F3059AE0067E8FB /* BookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
@@ -150,9 +154,11 @@
 		AA169FDC1EEA28B100765799 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */,
 				AA6668DA1EE7896F00DFABBB /* BookCollectionViewController.swift */,
 				AA9EFBC01F39A92E00F7BF01 /* BookSummaryViewController.swift */,
+				AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */,
+				AA7878F21F4815C100066398 /* StreamViewController.swift */,
+				AA7878F01F4815B100066398 /* UserViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -208,11 +214,11 @@
 		AAC603F41ECEBDFD0073FF43 /* MorehouseDPS */ = {
 			isa = PBXGroup;
 			children = (
-				AA7878E61F4392FD00066398 /* Views */,
-				AA9EFBBD1F37E01500F7BF01 /* Helper */,
 				AA82D5B31F30598F0067E8FB /* API */,
-				AA169FDC1EEA28B100765799 /* ViewControllers */,
+				AA9EFBBD1F37E01500F7BF01 /* Helper */,
 				AA169FDB1EEA28A000765799 /* Models */,
+				AA7878E61F4392FD00066398 /* Views */,
+				AA169FDC1EEA28B100765799 /* ViewControllers */,
 				AA0F52121ED40A2A008CF619 /* MorehouseDPS.entitlements */,
 				AAA342F91ECEC50B007E8874 /* GoogleService-Info.plist */,
 				AAC603F51ECEBDFD0073FF43 /* AppDelegate.swift */,
@@ -538,8 +544,10 @@
 				AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */,
 				AA9EFBC11F39A92E00F7BF01 /* BookSummaryViewController.swift in Sources */,
 				AA7878E81F43932600066398 /* BookSummaryHeaderView.swift in Sources */,
+				AA7878F31F4815C100066398 /* StreamViewController.swift in Sources */,
 				AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */,
 				AA9EFBBF1F383EA900F7BF01 /* CustomImageView.swift in Sources */,
+				AA7878F11F4815B100066398 /* UserViewController.swift in Sources */,
 				AA7878EA1F47ECA400066398 /* BookDataSource.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
 				AA7878EE1F4805D600066398 /* BookSummaryDataSource.swift in Sources */,
