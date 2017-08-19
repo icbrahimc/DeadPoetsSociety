@@ -7,6 +7,7 @@
 //
 
 import FirebaseDatabase
+import LBTAComponents
 import SwiftyJSON
 import UIKit
 
@@ -15,9 +16,9 @@ fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0
 fileprivate var searches = ["Hey", "Soul", "Sister", "Mama", "Ibrahim"]
 fileprivate let itemsPerRow: CGFloat = 3
 
-class BookCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class BookCollectionViewController: DatasourceController {
 
-    var books: [Books] = [Books(author: "Ibrahim", title: "Conteh", copies: 3, imageURL: "huh")]
+//    var books: [Books] = [Books(author: "Ibrahim", title: "Conteh", copies: 3, imageURL: "huh")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         // Register cell classes
         self.collectionView!.register(BooksCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
+        BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource, books) in
+            bookDataSource.books = books
+            self.datasource = bookDataSource
+            self.collectionView?.reloadData()
+        })
 //        BookAPI.rootDB.child("books").observe(.value, with: { (snapshot) in
 //            for rest in snapshot.children.allObjects as! [DataSnapshot] {
 //                let snapJSON = JSON(rest.value)
@@ -60,20 +66,19 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
 
     // MARK: UICollectionViewDataSource
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return books.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BooksCell
-        // Configure the cell
-        cell.book = books[indexPath.row]
-        return cell
-    }
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return books.count
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BooksCell
+//        // Configure the cell
+//        cell.book = books[indexPath.row]
+//        return cell
+//    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(books[indexPath.row])
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.gray.cgColor
@@ -87,7 +92,7 @@ class BookCollectionViewController: UICollectionViewController, UICollectionView
         cell?.layer.borderColor = UIColor.clear.cgColor
     }
     
-    func collectionView(_ collectionView: UICollectionView,
+    override func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         //2

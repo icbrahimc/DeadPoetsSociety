@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // The main view controller for the application.
         window = UIWindow(frame: UIScreen.main.bounds)
         let collectionLayout = UICollectionViewFlowLayout()
-        let homeViewController = BookCollectionViewController(collectionViewLayout: collectionLayout)
+        let homeViewController = BookCollectionViewController()
         homeViewController.view.backgroundColor = UIColor.red
         self.window!.rootViewController = UINavigationController(rootViewController: homeViewController)
         self.window!.makeKeyAndVisible()

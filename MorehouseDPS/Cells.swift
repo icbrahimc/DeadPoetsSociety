@@ -10,9 +10,10 @@ import Foundation
 import LBTAComponents
 
 class BookCell: DatasourceCell {
-    var book: Books? {
+    override var datasourceItem: Any? {
         didSet {
-            bookImage.loadImageUsingUrlString((book?.imageURL)!)
+            guard let book = datasourceItem as? Books else { return }
+            bookImage.loadImageUsingUrlString(book.imageURL!)
         }
     }
     
@@ -27,8 +28,4 @@ class BookCell: DatasourceCell {
         imageView.backgroundColor = UIColor.white
         return imageView
     }()
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
