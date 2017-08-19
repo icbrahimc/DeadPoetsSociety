@@ -17,7 +17,7 @@ fileprivate let itemsPerRow: CGFloat = 3
 
 class BookCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    var books: [Books] = []
+    var books: [Books] = [Books(author: "Ibrahim", title: "Conteh", copies: 3, imageURL: "huh")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
