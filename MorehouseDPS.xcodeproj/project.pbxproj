@@ -16,6 +16,7 @@
 		AA7878E81F43932600066398 /* BookSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878E71F43932600066398 /* BookSummaryHeaderView.swift */; };
 		AA7878EA1F47ECA400066398 /* BookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878E91F47ECA400066398 /* BookDataSource.swift */; };
 		AA7878EC1F47F5A500066398 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878EB1F47F5A500066398 /* Cells.swift */; };
+		AA7878EE1F4805D600066398 /* BookSummaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7878ED1F4805D600066398 /* BookSummaryDataSource.swift */; };
 		AA82D5B51F3059AE0067E8FB /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82D5B41F3059AE0067E8FB /* BookAPI.swift */; };
 		AA9D5E661ED1467F0020AA1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */; };
 		AA9EFBBC1F37ADAD00F7BF01 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */; };
@@ -60,6 +61,7 @@
 		AA7878E71F43932600066398 /* BookSummaryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSummaryHeaderView.swift; sourceTree = "<group>"; };
 		AA7878E91F47ECA400066398 /* BookDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataSource.swift; sourceTree = "<group>"; };
 		AA7878EB1F47F5A500066398 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		AA7878ED1F4805D600066398 /* BookSummaryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSummaryDataSource.swift; sourceTree = "<group>"; };
 		AA82D5B41F3059AE0067E8FB /* BookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		AA9D5E651ED1467F0020AA1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				AA9EFBBB1F37ADAD00F7BF01 /* Books.swift */,
 				AA7878E91F47ECA400066398 /* BookDataSource.swift */,
+				AA7878ED1F4805D600066398 /* BookSummaryDataSource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				AA9EFBBF1F383EA900F7BF01 /* CustomImageView.swift in Sources */,
 				AA7878EA1F47ECA400066398 /* BookDataSource.swift in Sources */,
 				AAC603F61ECEBDFD0073FF43 /* AppDelegate.swift in Sources */,
+				AA7878EE1F4805D600066398 /* BookSummaryDataSource.swift in Sources */,
 				AA7878E51F438EBB00066398 /* BookSummaryView.swift in Sources */,
 				AA6668DF1EE7E7D100DFABBB /* BookCollectionViewCell.swift in Sources */,
 				AA6668DB1EE7896F00DFABBB /* BookCollectionViewController.swift in Sources */,

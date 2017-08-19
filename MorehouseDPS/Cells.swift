@@ -58,6 +58,13 @@ class BookSummaryCell: DatasourceCell {
 }
 
 class BookSummaryHeaderCell: DatasourceCell {
+    override var datasourceItem: Any? {
+        didSet {
+            guard let book = datasourceItem as? Books else { return }
+            thumbNail.loadImageUsingUrlString(book.imageURL!)
+        }
+    }
+    
     override func setupViews() {
         super.setupViews()
         backgroundColor = .white
@@ -77,8 +84,6 @@ class BookSummaryHeaderCell: DatasourceCell {
     
     let thumbNail: CustomImageView = {
         let imageView = CustomImageView()
-        let profileImage: UIImage = #imageLiteral(resourceName: "LaunchScreen")
-        imageView.image = profileImage
         return imageView
     }()
     

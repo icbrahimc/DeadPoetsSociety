@@ -25,28 +25,12 @@ class BookCollectionViewController: DatasourceController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(BooksCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource, books) in
             bookDataSource.books = books
             self.datasource = bookDataSource
             self.collectionView?.reloadData()
         })
-//        BookAPI.rootDB.child("books").observe(.value, with: { (snapshot) in
-//            for rest in snapshot.children.allObjects as! [DataSnapshot] {
-//                let snapJSON = JSON(rest.value)
-//                let title = snapJSON["title"].stringValue
-//                let author = snapJSON["author"].stringValue
-//                let imageURL = snapJSON["imageUrl"].stringValue
-//                let copies = snapJSON["copies"].intValue
-//                
-//                self.books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
-//            }
-//            self.collectionView?.reloadData()
-//        })
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -148,34 +132,4 @@ class BookCollectionViewController: DatasourceController {
     
     }
     */
-}
-
-class BooksCell: UICollectionViewCell {
-    var book: Books? {
-        didSet {
-            bookImage.loadImageUsingUrlString((book?.imageURL)!)
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .red
-        
-        setupView()
-    }
-    
-    let bookImage: CustomImageView = {
-        let imageView = CustomImageView()
-        imageView.backgroundColor = UIColor.white
-        return imageView
-    }()
-    
-    func setupView() {
-        addSubview(bookImage)
-        bookImage.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

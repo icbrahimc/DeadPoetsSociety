@@ -9,20 +9,6 @@
 import LBTAComponents
 import UIKit
 
-class BookSummaryDataSource: Datasource {
-    override func headerClasses() -> [DatasourceCell.Type]? {
-        return [BookSummaryHeaderCell.self]
-    }
-    
-    override func cellClasses() -> [DatasourceCell.Type] {
-        return [BookSummaryCell.self]
-    }
-    
-    override func numberOfItems(_ section: Int) -> Int {
-        return 1
-    }
-}
-
 class BookSummaryViewController: DatasourceController {
     var bookData: Books?
 
@@ -30,6 +16,7 @@ class BookSummaryViewController: DatasourceController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         let dataSource = BookSummaryDataSource()
+        dataSource.book = bookData
         self.datasource = dataSource
         // Do any additional setup after loading the view.
     }
