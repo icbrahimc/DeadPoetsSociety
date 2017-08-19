@@ -61,6 +61,11 @@ class BookSummaryHeaderCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet {
             guard let book = datasourceItem as? Books else { return }
+            let title: String = book.title!
+            let author: String = book.author!
+            // Set the cell data.
+            authorLabel.text = author
+            titleLabel.text = title
             thumbNail.loadImageUsingUrlString(book.imageURL!)
         }
     }
@@ -78,8 +83,8 @@ class BookSummaryHeaderCell: DatasourceCell {
         
         // Anchors
         thumbNail.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 90, heightConstant: 150)
-        titleLabel.anchor(self.topAnchor, left: nil, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 6, widthConstant: 0, heightConstant: 20)
-        authorLabel.anchor(titleLabel.bottomAnchor, left: nil, bottom: nil, right: titleLabel.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        titleLabel.anchor(self.topAnchor, left: thumbNail.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 20, leftConstant: 20, bottomConstant: 0, rightConstant: 6, widthConstant: 0, heightConstant: 0)
+        authorLabel.anchor(titleLabel.bottomAnchor, left: titleLabel.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
     }
     
     let thumbNail: CustomImageView = {
@@ -91,6 +96,8 @@ class BookSummaryHeaderCell: DatasourceCell {
         let title = UILabel()
         title.text = "Morehouse Dead Poets Society"
         title.font = UIFont.boldSystemFont(ofSize: 14)
+        title.numberOfLines = 0
+        title.lineBreakMode = NSLineBreakMode.byWordWrapping
         return title
     }()
     
