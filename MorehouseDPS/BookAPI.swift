@@ -16,6 +16,17 @@ class BookAPI: NSObject {
     static let sharedInstance = BookAPI()
     private let rootDB: DatabaseReference! = Database.database().reference()
     
+    /** Return whether the user value exists in the database. */
+    func newUser(uuid: String, completion: @escaping (Bool) -> ()) {
+        rootDB.child("users").child(uuid).observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.exists() {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        })
+    }
+    
     /** Create user */
     func createUser(uuid: String) {
 //        rootDB.

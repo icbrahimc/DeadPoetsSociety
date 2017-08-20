@@ -64,8 +64,27 @@ class LoginViewController: UIViewController {
                 }
                 
                 // If the user is signed in and authenticated, segue to a new view controller.
-                if user != nil {
-                    self.navigationController?.popToRootViewController(animated: true)
+                if let newUser = user {
+                    
+                    let graphPath = "me"
+                    let parameters = ["fields": "id, email, name, first_name, last_name, picture"]
+                    let graphRequest = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters)
+                    let connection = FBSDKGraphRequestConnection()
+                    
+                    connection.add(graphRequest, completionHandler: { (connection, result, error) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }
+                        
+                        BookAPI.sharedInstance.newUser(uuid: newUser.uid, completion: { (newUserFlag) in
+                            if newUserFlag {
+                                
+                            } else {
+                                
+                            }
+                        })
+                    })
+                    connection.start()
                 }
             }
         })
