@@ -20,16 +20,6 @@ class BookCollectionViewController: DatasourceController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let firebaseAuth = Auth.auth()
-        
-        do {
-            try firebaseAuth.signOut()
-            navigationController?.popToRootViewController(animated: true)
-            print("Logged Out Successfully")
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

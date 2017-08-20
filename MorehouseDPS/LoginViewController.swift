@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
     override func viewDidLoad() {
@@ -78,9 +79,11 @@ class LoginViewController: UIViewController {
                         
                         BookAPI.sharedInstance.newUser(uuid: newUser.uid, completion: { (newUserFlag) in
                             if newUserFlag {
-                                
+                                let json = JSON(result!)
+                                BookAPI.sharedInstance.createUser(uuid: newUser.uid, data: json)
+                                self.navigationController?.popToRootViewController(animated: true)
                             } else {
-                                
+                                self.navigationController?.popToRootViewController(animated: true)
                             }
                         })
                     })

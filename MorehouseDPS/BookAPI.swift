@@ -28,8 +28,24 @@ class BookAPI: NSObject {
     }
     
     /** Create user */
-    func createUser(uuid: String) {
-//        rootDB.
+    func createUser(uuid: String, data: JSON) {
+        let firstName: String = data["first_name"].stringValue
+        let lastName: String = data["last_name"].stringValue
+        let imageURL: String = data["picture"]["data"]["url"].stringValue
+        let email: String = data["email"].stringValue
+        
+        let dataDictionary = [
+            "first_name": firstName,
+            "last_name": lastName,
+            "imageURL": imageURL,
+            "email": email,
+        ]
+        
+        rootDB.child("users").child(uuid).setValue(dataDictionary, withCompletionBlock: { (err, ref) in
+            if let error = err {
+                print(error.localizedDescription)
+            }
+        })
     }
     
     /** Fetch all books from the database */
