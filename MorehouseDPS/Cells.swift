@@ -118,3 +118,50 @@ class BookSummaryHeaderCell: DatasourceCell {
         return author
     }()
 }
+
+class UserHeaderCell: DatasourceCell {
+    override var datasourceItem: Any? {
+        didSet {
+            guard let user = datasourceItem as? User else { return }
+            let imageURL = user.imageURL
+            profilePhoto.loadImageUsingUrlString(imageURL!)
+        }
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        
+        addSubview(profilePhoto)
+        addSubview(fNameLabel)
+        addSubview(lNameLabel)
+        
+        // Anchors
+        profilePhoto.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        
+    }
+    
+    let profilePhoto: CustomImageView = {
+        let imageView = CustomImageView()
+        imageView.layer.cornerRadius = 5
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
+    let fNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
+    }()
+    
+    let lNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 10)
+        return label
+    }()
+}
+
+class UserBookCell: DatasourceCell {
+    override func setupViews() {
+        super.setupViews()
+    }
+}

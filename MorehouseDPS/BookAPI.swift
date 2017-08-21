@@ -48,6 +48,22 @@ class BookAPI: NSObject {
         })
     }
     
+    /** Fetch user data. */
+    func fetchUserData(uuid: String, completion: @escaping (UserDatasource) -> ()) {
+        let userDatasource = UserDatasource()
+        rootDB.child("users").child(uuid).observe(.value, with: { (snapshot) in
+            let snapJSON = JSON(snapshot.value)
+            let first_name = snapJSON["first_name"].stringValue
+            let last_name = snapJSON["last_name"].stringValue
+            let imageURL = snapJSON["imageURL"].stringValue
+            let email = snapJSON["email"].stringValue
+            
+            let userData = User(firstName: first_name, lastName: last_name, email: email, imageURL: imageURL)
+            userDatasource.userData = userData
+            completion(userDatasource)
+        })
+    }
+    
     /** Fetch all books from the database */
     func fetchBooks(completion: @escaping (BookDataSource, [Books]) -> ()) {
         let bookDataSource = BookDataSource()

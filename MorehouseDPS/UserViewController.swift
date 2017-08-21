@@ -6,13 +6,18 @@
 //  Copyright © 2017 icbrahimc. All rights reserved.
 //
 
+import FirebaseAuth
+import LBTAComponents
 import UIKit
 
-class UserViewController: UIViewController {
+class UserViewController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let userID = Auth.auth().currentUser?.uid
+        BookAPI.sharedInstance.fetchUserData(uuid: userID!, completion: { (datasource) in
+            self.datasource = datasource
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +26,10 @@ class UserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 200)
+    }
+    
     /*
     // MARK: - Navigation
 
