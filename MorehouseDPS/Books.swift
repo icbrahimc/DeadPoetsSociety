@@ -13,4 +13,5 @@ struct Books {
     var title: String?
     var copies: Int?
     var imageURL: String?
+    var summary: String?
 }

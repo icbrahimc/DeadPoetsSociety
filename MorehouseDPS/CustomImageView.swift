@@ -32,11 +32,13 @@ class CustomImageView: UIImageView {
                 return
             }
             DispatchQueue.main.async(execute: {
-                let imageToCache = UIImage(data: data!)
-                if self.imageUrlString == urlString {
-                    self.image = imageToCache
+                if let imageData = data {
+                    let imageToCache = UIImage(data: imageData)
+                    if self.imageUrlString == urlString {
+                        self.image = imageToCache
+                    }
+                    imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
                 }
-                imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
             })
         }).resume()
     }

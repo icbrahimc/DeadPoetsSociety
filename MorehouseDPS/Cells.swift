@@ -13,7 +13,9 @@ class BookCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet {
             guard let book = datasourceItem as? Books else { return }
-            bookImage.loadImageUsingUrlString(book.imageURL!)
+            if let url = book.imageURL {
+                bookImage.loadImageUsingUrlString(url)
+            }
         }
     }
     
@@ -36,6 +38,14 @@ class BookCell: DatasourceCell {
 }
 
 class BookSummaryCell: DatasourceCell {
+    override var datasourceItem: Any? {
+        didSet {
+            guard let book = datasourceItem as? Books else { return }
+            let summary = book.summary
+            summaryText.text = summary
+        }
+    }
+    
     override func setupViews() {
         super.setupViews()
         backgroundColor = .white
@@ -123,33 +133,41 @@ class UserHeaderCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet {
             guard let user = datasourceItem as? User else { return }
+            let fName = user.firstName
             let imageURL = user.imageURL
+            
             profilePhoto.loadImageUsingUrlString(imageURL!)
+            fNameLabel.text = fName
         }
     }
     
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor.black
+        
         addSubview(profilePhoto)
         addSubview(fNameLabel)
         addSubview(lNameLabel)
         
         // Anchors
-        profilePhoto.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        profilePhoto.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        fNameLabel.anchor(profilePhoto.topAnchor, left: profilePhoto.rightAnchor, bottom: nil, right: nil, topConstant: 2, leftConstant: 5, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
         
     }
     
     let profilePhoto: CustomImageView = {
         let imageView = CustomImageView()
-        imageView.layer.cornerRadius = 5
+        imageView.layer.cornerRadius = 25
+        imageView.layer.borderWidth = 3.0
         imageView.layer.masksToBounds = true
         return imageView
     }()
     
     let fNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     

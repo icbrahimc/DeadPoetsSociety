@@ -30,8 +30,9 @@ class BookCollectionViewController: DatasourceController {
             }
         })
         
-        BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource, books) in
-            bookDataSource.books = books
+        self.collectionView?.backgroundColor = .black
+        
+        BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource) in
             self.datasource = bookDataSource
             self.collectionView?.reloadData()
         })

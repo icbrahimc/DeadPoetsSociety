@@ -65,7 +65,7 @@ class BookAPI: NSObject {
     }
     
     /** Fetch all books from the database */
-    func fetchBooks(completion: @escaping (BookDataSource, [Books]) -> ()) {
+    func fetchBooks(completion: @escaping (BookDataSource) -> ()) {
         let bookDataSource = BookDataSource()
         var books: [Books] = []
         rootDB.child("books").observe(.value, with: { (snapshot) in
@@ -75,9 +75,11 @@ class BookAPI: NSObject {
                 let author = snapJSON["author"].stringValue
                 let imageURL = snapJSON["imageUrl"].stringValue
                 let copies = snapJSON["copies"].intValue
-                books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL))
+                let summary = snapJSON["summary"].stringValue
+                books.append(Books(author: author, title: title, copies: copies, imageURL: imageURL, summary: summary))
             }
-            completion(bookDataSource, books)
+            bookDataSource.books = books
+            completion(bookDataSource)
         })
     }
 }
