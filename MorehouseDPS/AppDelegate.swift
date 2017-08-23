@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Home controllers.
         let homeViewController = BookCollectionViewController()
-        homeViewController.view.backgroundColor = UIColor.red
         let homeNav = UINavigationController(rootViewController: homeViewController)
         homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeLib"), tag: 1)
         
@@ -45,8 +44,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userNav = UINavigationController(rootViewController: userViewController)
         userNav.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "user"), tag: 1)
         
+        let navControllers = [homeNav, streamNav, userNav]
+        
+        for navs in navControllers {
+            navs.navigationBar.backgroundColor = .black
+            navs.navigationBar.barTintColor = .black
+            navs.navigationBar.tintColor = UIColor.dpsGreen
+        }
+        
         let tabController = UITabBarController()
-        tabController.viewControllers = [homeNav, streamNav, userNav]
+        tabController.viewControllers = navControllers
+        tabController.tabBar.tintColor = UIColor.dpsGreen
+        tabController.tabBar.backgroundColor = .black
+        tabController.tabBar.barTintColor = .black
         
         self.window!.rootViewController = tabController
         self.window!.makeKeyAndVisible()

@@ -30,6 +30,7 @@ class BookCollectionViewController: DatasourceController {
             }
         })
         
+        navigationItem.title = "Books"
         self.collectionView?.backgroundColor = .black
         
         BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource) in

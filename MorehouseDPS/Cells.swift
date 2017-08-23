@@ -48,26 +48,30 @@ class BookSummaryCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .white
+        backgroundColor = .black
         
         addSubview(summaryLabel)
         addSubview(summaryText)
         
         // Anchors
         summaryLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
-        summaryText.anchor(summaryLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 6, leftConstant: 3, bottomConstant: 0, rightConstant: 6, widthConstant: frame.width, heightConstant: frame.height)
+        summaryText.anchor(summaryLabel.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 6, leftConstant: 3, bottomConstant: 0, rightConstant: 6, widthConstant: 0, heightConstant: 0)
     }
     
     let summaryLabel: UILabel = {
         let summary = UILabel()
         summary.text = "Summary"
         summary.font = UIFont.boldSystemFont(ofSize: 14)
+        summary.textColor = UIColor.dpsGreen
         return summary
     }()
     
-    let summaryText: UITextView = {
-        let summary = UITextView()
-        summary.text = "Yerp"
+    let summaryText: UILabel = {
+        let summary = UILabel()
+        summary.textColor = UIColor.dpsGreen
+        summary.font = UIFont.systemFont(ofSize: 10)
+        summary.numberOfLines = 0
+        summary.lineBreakMode = NSLineBreakMode.byWordWrapping
         return summary
     }()
 }
@@ -87,10 +91,10 @@ class BookSummaryHeaderCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .white
+        backgroundColor = .black
         
         separatorLineView.isHidden = false
-        separatorLineView.backgroundColor = UIColor.black
+        separatorLineView.backgroundColor = UIColor.dpsGreen
         
         addSubview(thumbNail)
         addSubview(titleLabel)
@@ -118,6 +122,7 @@ class BookSummaryHeaderCell: DatasourceCell {
         title.font = UIFont.boldSystemFont(ofSize: 14)
         title.numberOfLines = 0
         title.lineBreakMode = NSLineBreakMode.byWordWrapping
+        title.textColor = UIColor.dpsGreen
         return title
     }()
     
@@ -125,6 +130,7 @@ class BookSummaryHeaderCell: DatasourceCell {
         let author = UILabel()
         author.text = "By: Ibrahim Conteh"
         author.font = UIFont.systemFont(ofSize: 10)
+        author.textColor = UIColor.dpsGreen
         return author
     }()
 }

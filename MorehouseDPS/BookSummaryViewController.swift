@@ -14,7 +14,7 @@ class BookSummaryViewController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .black
         let dataSource = BookSummaryDataSource()
         dataSource.book = bookData
         self.datasource = dataSource
