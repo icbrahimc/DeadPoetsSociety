@@ -31,6 +31,8 @@ class BookCollectionViewController: DatasourceController {
         })
         
         navigationItem.title = "Books"
+        navigationItem.titleView?.tintColor = UIColor.dpsGreen
+        navigationItem.titleView?.backgroundColor = UIColor.dpsGreen
         self.collectionView?.backgroundColor = .black
         
         BookAPI.sharedInstance.fetchBooks(completion: { (bookDataSource) in

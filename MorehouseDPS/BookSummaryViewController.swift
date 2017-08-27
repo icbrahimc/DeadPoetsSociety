@@ -14,12 +14,14 @@ class BookSummaryViewController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
         let dataSource = BookSummaryDataSource()
         dataSource.book = bookData
         self.datasource = dataSource
         
         navigationItem.title = "Book Summary"
+        navigationItem.titleView?.tintColor = UIColor.dpsGreen
+        navigationItem.titleView?.backgroundColor = UIColor.dpsGreen
+        collectionView?.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +35,7 @@ class BookSummaryViewController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height - 200)
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
 

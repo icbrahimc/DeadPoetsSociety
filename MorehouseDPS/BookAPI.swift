@@ -27,7 +27,7 @@ class BookAPI: NSObject {
         })
     }
     
-    /** Create user */
+    /** Create user. */
     func createUser(uuid: String, data: JSON) {
         let firstName: String = data["first_name"].stringValue
         let lastName: String = data["last_name"].stringValue
@@ -61,6 +61,27 @@ class BookAPI: NSObject {
             let userData = User(firstName: first_name, lastName: last_name, email: email, imageURL: imageURL)
             userDatasource.userData = userData
             completion(userDatasource)
+        })
+    }
+    
+//    /** Fetch user books. */
+//    func fetchUserBooks(uuid: String) {
+//        rootDB.child("userBooks").child(uuid).observe(.value, with: { (snapshot) in
+//            let snapJSON = JSON(snapshot.value)
+//        })
+//    }
+    /** Fetch a single book. */
+    func fetchBook(bID: String, completion: @escaping (UserDatasource) -> ()) -> Void {
+        var book: Books?
+        rootDB.child("books").child(bID).observe(.value, with: { (snapshot) in
+            let snapJSON = JSON(snapshot.value)
+            let title = snapJSON["title"].stringValue
+            let author = snapJSON["author"].stringValue
+            let imageURL = snapJSON["imageUrl"].stringValue
+            let copies = snapJSON["copies"].intValue
+            let summary = snapJSON["summary"].stringValue
+            book = Books(author: author, title: title, copies: copies, imageURL: imageURL, summary: summary)
+//            completion(<#T##UserDatasource#>)
         })
     }
     

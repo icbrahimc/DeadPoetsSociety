@@ -55,7 +55,7 @@ class BookSummaryCell: DatasourceCell {
         
         // Anchors
         summaryLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
-        summaryText.anchor(summaryLabel.topAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 6, leftConstant: 3, bottomConstant: 0, rightConstant: 6, widthConstant: 0, heightConstant: 0)
+        summaryText.anchor(summaryLabel.bottomAnchor, left: self.leftAnchor, bottom: nil, right: self.rightAnchor, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 6, widthConstant: 0, heightConstant: 0)
     }
     
     let summaryLabel: UILabel = {
@@ -69,7 +69,7 @@ class BookSummaryCell: DatasourceCell {
     let summaryText: UILabel = {
         let summary = UILabel()
         summary.textColor = UIColor.dpsGreen
-        summary.font = UIFont.systemFont(ofSize: 10)
+        summary.font = UIFont.systemFont(ofSize: 12)
         summary.numberOfLines = 0
         summary.lineBreakMode = NSLineBreakMode.byWordWrapping
         return summary

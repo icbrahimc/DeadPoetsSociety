@@ -47,9 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navControllers = [homeNav, streamNav, userNav]
         
         for navs in navControllers {
-            navs.navigationBar.backgroundColor = .black
-            navs.navigationBar.barTintColor = .black
             navs.navigationBar.tintColor = UIColor.dpsGreen
+            navs.navigationBar.barStyle = .blackTranslucent
         }
         
         let tabController = UITabBarController()
