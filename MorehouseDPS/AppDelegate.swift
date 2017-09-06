@@ -34,17 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeNav = UINavigationController(rootViewController: homeViewController)
         homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeLib"), tag: 1)
         
-        // Stream controllers.
-        let streamViewController = StreamViewController()
-        let streamNav = UINavigationController(rootViewController: streamViewController)
-        streamNav.tabBarItem = UITabBarItem(title: "Notifications", image: #imageLiteral(resourceName: "notifcation"), tag: 1)
-        
         // User controllers.
         let userViewController = UserViewController()
         let userNav = UINavigationController(rootViewController: userViewController)
         userNav.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "user"), tag: 1)
         
-        let navControllers = [homeNav, streamNav, userNav]
+        let navControllers = [homeNav, userNav]
         
         for navs in navControllers {
             navs.navigationBar.tintColor = UIColor.dpsGreen
